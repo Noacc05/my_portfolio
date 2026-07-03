@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah Fraser</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-header">
+        <img src="src/images/profile.jpg" alt="Noah Fraser" class="profile-photo">
+        
+        <div class="profile-info">
+          <h1 style="color: var(--accent);">Noah Fraser (he/him)</h1>
+          <h4>
+            Computer Scientist | Developer | Mathematician | University Student <br> 
+            <a href="mailto:nfrase07@uoguelph.ca" style="color: var(--accent);">nfrase07@uoguelph.ca</a> | 
+            <a href="https://github.com/Noacc05" target="_blank" style="color: var(--accent);">GitHub</a> |
+            <a href="https://www.linkedin.com/in/noah-fraser-7a6b60302/" target="_blank" style="color: var(--accent);">LinkedIn</a>
+          </h4>
+          <p>Welcome to my portfolio! Here you'll find a collection of my projects, experiments, and work in the fields of computer science, development, and mathematics. Feel free to explore and reach out if you have any questions or opportunities for collaboration.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev-btn">&#10094;</button>
+    
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        
+        <div class="carousel-slide">
+          <h1 style="color: var(--accent); margin-top: 0;">About Me</h1>
+          <p>
+            I am a computer science student at the University of Guelph with a passion for 
+            exploring the intersection of technology, the natural world, and creativity. My interests include 
+            real-time computer vision, data analysis, and developing innovative solutions to large-scale problems. 
+            I enjoy experimenting with technologies new and old then pushing the boundaries of what is possible in code and life.
+            My interests also include the arts, comics, music, photography, and the outdoors.
+          </p>
+        </div>
+
+        <div class="carousel-slide">
+          <h1 style="color: var(--accent); margin-top: 0;">Skills & Tools</h1>
+          <p>
+            <strong>Languages:</strong> Python, JavaScript, C, C++, Go, HTML/CSS, Godot<br>
+            <strong>Frameworks & APIs:</strong> OpenCV, NumPy, Curses, C Standard Library, Node.js, Okta, SnipeIT, Mosyle<br>
+            <strong>Concepts:</strong> Real-time Computing, Machine Learning, Data Structures, Algorithms, Computer Vision, Modular Design, Software Engineering<br>
+            <strong>Tools:</strong> Git, GitHub, VS Code, Linux, OBS, Godot Engine, Figma, Okta, SnipeIT, Mosyle, Linear, Visual Studio, Terminal, Command Line Tools
+          </p>
+        </div>
+
+        <div class="carousel-slide">
+          <h1 style="color: var(--accent); margin-top: 0;">Education</h1>
+          <p>
+            <strong>University of Guelph</strong><br>
+            Bachelor of Computing, Major in Computer Science, Minor in Mathematics<br><br>Sep 2024 - Present<br><br>
+            <em>Relevant Coursework:</em> Data Structures, Object-Oriented Programming, Discrete Mathematics, Calculus, Statistics, Software Development.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="carousel-btn next-btn">&#10095;</button>
+  </div>
+</div>
+
+    <div class="container projects-scroll-container">
+      <div class="sticky-projects-header">
+        <h1 style="color: var(--accent); margin: 0 0 10px 0;">Projects</h1>
+        <hr style="border: 0; border-top: 2px solid var(--accent); margin: 0 0 20px 0;">
+      </div>
+
+      <div class="project-section">
+        <h2 style="color: var(--accent);">JavaScript Projects</h2>
+        <p>A collection of real-time computer vision and audio experiments and more built with JavaScript.</p>
+        
+        <div class="project-grid">
+          <a href="src/html_apps/spectrograph.html" class="project-card">
+            <img src="src/images/spectrograph-preview.png" alt="Spectrograph Preview">
+            <div class="project-info">
+              <h2>Audio Spectrograph</h2>
+              <p>Real-time FFT audio visualizer using the Web Audio API. Experimenting with different audio processing techniques and visualizations. Drawing inspiration from bird call analysis.</p>
+            </div>
+          </a>
+
+          <a href="src/html_apps/ascii.html" class="project-card">
+            <img src="src/images/ascii-preview.png" alt="ASCII Cam Preview">
+            <div class="project-info">
+              <h2>ASCII Cam + Edge Detection</h2>
+              <p>Live webcam feed running manual Sobel matrix convolutions mapped to ASCII characters. Also created a python version of the same concept using OBS and OpenCV so that you can run it on your own machine as your webcam.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2 style="color: var(--accent);">Terminal Projects</h2>
+        <p>A collection of terminal-based tools/applications and more built with C, C++, Go, Python.</p>
+        <div class="project-grid"></div>
+      </div>
+
+      <div class="project-section">
+        <h2 style="color: var(--accent);">Data Projects</h2>
+        <p>A collection of data analysis and visualization projects built with Python and other tools.</p>
+        <div class="project-grid"></div>
+      </div>
+      
+      <div class="project-section">
+        <h2 style="color: var(--accent);">School Projects</h2>
+        <p>A collection of data analysis and visualization projects built with Python and other tools.</p>
+        <div class="project-grid"></div>
+      </div>
+
+    </div>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

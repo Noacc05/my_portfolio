@@ -1,0 +1,242 @@
+:root {
+  --bg-color: #0f0f11;
+  --text-color: #eaeaea;
+  --accent: #b16de4;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#2f022f, #100715);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- Homepage Grid --- */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Project Cards --- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #151518; /* Slightly lighter than the body background */
+  overflow: hidden; /* Crucial: Clips the square image inside the rounded corners of the card */
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px); /* Gives it a nice "lift" effect on hover */
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px; /* Locks the height for the top portion */
+  object-fit: cover; /* The magic property that crops instead of squishing */
+  border-bottom: 1px solid #333; /* Clean separator line */
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #a0a0a0;
+}
+
+/* --- Profile Header --- */
+.profile-header {
+  display: flex;
+  align-items: center; /* Vertically centers the text with the image */
+  gap: 40px; /* Space between the photo and the text */
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%; /* This is the magic property that makes it a perfect circle */
+  object-fit: cover; /* Ensures your face isn't stretched if the image isn't perfectly square */
+  border: 2px solid #333; /* Optional: gives the circle a subtle dark border */
+  flex-shrink: 0; /* Prevents the image from being squished when the text gets long */
+}
+
+/* --- Profile Text Styling --- */
+.profile-info h1 {
+  margin: 0 0 5px 0;
+}
+
+.profile-info h4 {
+  margin: 0 0 15px 0;
+  color: #a0a0a0;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.profile-info a {
+  text-decoration: none;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
+
+.profile-info p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- Mobile Responsiveness --- */
+/* When the screen is smaller than 700px (like a phone), stack them vertically instead */
+@media (max-width: 700px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+/* --- Project Pages --- */
+/* Add this class to the body of your interactive projects to keep them full screen */
+.fullscreen-app {
+  overflow: hidden;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  z-index: 100;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* --- Scrollable Projects Container --- */
+.projects-scroll-container {
+  max-height: 50vh; /* Exactly half of the screen height */
+  overflow-y: auto; /* Adds a vertical scrollbar when content overflows */
+  padding-right: 15px; /* Gives the scrollbar some breathing room */
+  margin-bottom: 40px; 
+}
+
+.project-section {
+  margin-bottom: 50px; /* Space between the different project categories */
+}
+
+.project-section:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Custom Scrollbar Styling (Dark Theme) --- */
+.projects-scroll-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.projects-scroll-container::-webkit-scrollbar-track {
+  background: #151518; /* Matches your card backgrounds */
+  border-radius: 4px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb {
+  background: #333; /* Dark gray scroll thumb */
+  border-radius: 4px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent); /* Lights up with your accent color when hovered! */
+}
+
+/* --- Sticky Projects Header --- */
+.sticky-projects-header {
+  position: sticky;
+  top: 0;
+  
+  /* You MUST have a background color on a sticky header, 
+     otherwise the scrolling content will overlap and look messy */
+  background-color: var(--bg-color); 
+  
+  /* Keeps the header visually above the scrolling cards */
+  z-index: 10; 
+  
+  /* Adds a little breathing room so it doesn't look cramped when scrolling */
+  padding-top: 10px; 
+  padding-bottom: 5px;
+}
+
+/* --- Carousel Styling --- */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 900px; /* Wider than the viewport to fit the buttons */
+  margin: 10px;
+}
+
+.carousel-viewport {
+  overflow: hidden; /* Hides the slides that are off-screen */
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #151518;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out; /* Smooth sliding animation */
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%; /* Forces every slide to take up the full viewport */
+  box-sizing: border-box;
+  padding: 30px;
+  min-height: 250px; /* Prevents the box from jumping up and down if text lengths vary */
+}
+
+.carousel-slide p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* --- Carousel Navigation Buttons --- */
+.carousel-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0.7;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
