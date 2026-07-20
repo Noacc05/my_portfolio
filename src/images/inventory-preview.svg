@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360">
+  <rect width="800" height="360" fill="#0f0f11"/>
+  <rect x="0" y="0" width="800" height="360" fill="#0d0a12"/>
+  <!-- Terminal window chrome -->
+  <rect x="40" y="30" width="720" height="300" rx="8" fill="#151518" stroke="#333" stroke-width="1"/>
+  <rect x="40" y="30" width="720" height="32" rx="8" fill="#1e1e24"/>
+  <rect x="40" y="50" width="720" height="12" fill="#1e1e24"/>
+  <circle cx="66" cy="46" r="7" fill="#ff5f57"/>
+  <circle cx="90" cy="46" r="7" fill="#febc2e"/>
+  <circle cx="114" cy="46" r="7" fill="#28c840"/>
+  <!-- Terminal text -->
+  <text x="68" y="90" font-family="monospace" font-size="13" fill="#b16de4">$ ./READONLYsnipe_mosyle_sync.sh</text>
+  <text x="68" y="113" font-family="monospace" font-size="12" fill="#4ec9b0">[INFO] Fetching Mosyle devices...</text>
+  <text x="68" y="133" font-family="monospace" font-size="12" fill="#4ec9b0">[INFO] 606 devices loaded (593 Mac, 13 iOS)</text>
+  <text x="68" y="153" font-family="monospace" font-size="12" fill="#4ec9b0">[INFO] Querying Snipe-IT asset list...</text>
+  <text x="68" y="173" font-family="monospace" font-size="12" fill="#dcdcaa">[DIFF] 4 devices in Mosyle missing from Snipe-IT</text>
+  <text x="68" y="193" font-family="monospace" font-size="12" fill="#dcdcaa">[DIFF] 2 serial mismatches detected</text>
+  <text x="68" y="213" font-family="monospace" font-size="12" fill="#569cd6">  → MacBook Pro 14" (M3)  SN: C02XR1...</text>
+  <text x="68" y="233" font-family="monospace" font-size="12" fill="#569cd6">  → MacBook Air 13" (M2)  SN: FVFXG3...</text>
+  <text x="68" y="258" font-family="monospace" font-size="12" fill="#608b4e"># Run WRITEsnipe_mosyle_sync.sh to apply changes</text>
+  <text x="68" y="293" font-family="monospace" font-size="13" fill="#b16de4">$ _</text>
+</svg>
