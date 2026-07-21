@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#151518"/>
+  <!-- WiFi icon -->
+  <path d="M200,130 L200,130" fill="none" stroke="#b16de4" stroke-width="0"/>
+  <circle cx="200" cy="135" r="4" fill="#b16de4"/>
+  <path d="M182,120 Q200,105 218,120" fill="none" stroke="#b16de4" stroke-width="1.5"/>
+  <path d="M172,110 Q200,90 228,110" fill="none" stroke="#b16de4" stroke-width="1.5"/>
+  <path d="M162,100 Q200,75 238,100" fill="none" stroke="#b16de4" stroke-width="1.5"/>
+  <!-- SSID list left -->
+  <rect x="20" y="20" width="130" height="18" rx="3" fill="none" stroke="#f44336" stroke-width="1"/>
+  <text x="28" y="33" fill="#f44336" font-size="8" font-family="monospace">✗ WPA2-only NAT</text>
+  <rect x="20" y="43" width="130" height="18" rx="3" fill="none" stroke="#f44336" stroke-width="1"/>
+  <text x="28" y="56" fill="#f44336" font-size="8" font-family="monospace">✗ OPEN no VLAN</text>
+  <rect x="20" y="66" width="130" height="18" rx="3" fill="none" stroke="#f44336" stroke-width="1"/>
+  <text x="28" y="79" fill="#f44336" font-size="8" font-family="monospace">✗ WPA2 untagged</text>
+  <text x="85" y="100" text-anchor="middle" fill="#a0a0a0" font-size="8" font-family="monospace">Current State</text>
+  <!-- Arrow -->
+  <line x1="155" y1="55" x2="245" y2="55" stroke="#b16de4" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="245,52 252,55 245,58" fill="#b16de4"/>
+  <!-- SSID list right (target) -->
+  <rect x="255" y="20" width="130" height="18" rx="3" fill="none" stroke="#4caf50" stroke-width="1"/>
+  <text x="263" y="33" fill="#4caf50" font-size="8" font-family="monospace">✓ WPA3 Bridge VLAN</text>
+  <rect x="255" y="43" width="130" height="18" rx="3" fill="none" stroke="#4caf50" stroke-width="1"/>
+  <text x="263" y="56" fill="#4caf50" font-size="8" font-family="monospace">✓ WPA3 Bridge VLAN</text>
+  <rect x="255" y="66" width="130" height="18" rx="3" fill="none" stroke="#4caf50" stroke-width="1"/>
+  <text x="263" y="79" fill="#4caf50" font-size="8" font-family="monospace">✓ WPA3 Bridge VLAN</text>
+  <text x="320" y="100" text-anchor="middle" fill="#a0a0a0" font-size="8" font-family="monospace">Target Standard</text>
+  <!-- Bottom label -->
+  <text x="200" y="168" text-anchor="middle" fill="#a0a0a0" font-size="8" font-family="monospace">Meraki API Audit</text>
+</svg>

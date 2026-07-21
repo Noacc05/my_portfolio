@@ -65,6 +65,18 @@ body, html {
   color: #a0a0a0;
 }
 
+.project-tech {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--accent);
+  background: rgba(177, 109, 228, 0.1);
+  border: 1px solid rgba(177, 109, 228, 0.25);
+  border-radius: 4px;
+}
+
 /* --- Profile Header --- */
 .profile-header {
   display: flex;

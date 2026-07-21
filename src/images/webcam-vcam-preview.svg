@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#151518"/>
+  <!-- Camera outline -->
+  <rect x="20" y="25" width="160" height="130" rx="6" fill="none" stroke="#333" stroke-width="1.5"/>
+  <circle cx="100" cy="90" r="30" fill="none" stroke="#b16de4" stroke-width="1"/>
+  <circle cx="100" cy="90" r="8" fill="#b16de4" opacity="0.3"/>
+  <text x="100" y="140" text-anchor="middle" fill="#a0a0a0" font-size="8" font-family="monospace">Physical Cam</text>
+  <!-- Arrow -->
+  <line x1="185" y1="90" x2="215" y2="90" stroke="#b16de4" stroke-width="1.5"/>
+  <polygon points="215,86 223,90 215,94" fill="#b16de4"/>
+  <!-- ASCII output -->
+  <rect x="225" y="25" width="155" height="130" rx="6" fill="none" stroke="#b16de4" stroke-width="1.5"/>
+  <text x="235" y="45" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.8">/ - | \ - /</text>
+  <text x="235" y="57" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.7">| @ # . * |</text>
+  <text x="235" y="69" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.9">- . W M # -</text>
+  <text x="235" y="81" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.6">/ * . # @ \</text>
+  <text x="235" y="93" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.8">\ # M . * /</text>
+  <text x="235" y="105" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.7">| . @ W # |</text>
+  <text x="235" y="117" fill="#b16de4" font-size="9" font-family="monospace" opacity="0.5">- / | \ - -</text>
+  <text x="302" y="143" text-anchor="middle" fill="#a0a0a0" font-size="8" font-family="monospace">Virtual Cam Output</text>
+  <!-- Label -->
+  <text x="200" y="172" text-anchor="middle" fill="#a0a0a0" font-size="8" font-family="monospace">OpenCV → Sobel → pyvirtualcam @ 30fps</text>
+</svg>

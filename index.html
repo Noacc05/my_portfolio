@@ -47,9 +47,9 @@
           <h1 style="color: var(--accent); margin-top: 0;">Skills & Tools</h1>
           <p>
             <strong>Languages:</strong> Python, JavaScript, C, C++, Go, HTML/CSS, Godot<br>
-            <strong>Frameworks & APIs:</strong> OpenCV, NumPy, Curses, C Standard Library, Node.js, Okta, SnipeIT, Mosyle<br>
+            <strong>Frameworks & APIs:</strong> OpenCV, NumPy, Curses, C Standard Library, Node.js, Next.js, Okta API, SnipeIT API, Mosyle API, Google API, MS Graph<br>
             <strong>Concepts:</strong> Real-time Computing, Machine Learning, Data Structures, Algorithms, Computer Vision, Modular Design, Software Engineering<br>
-            <strong>Tools:</strong> Git, GitHub, VS Code, Linux, OBS, Godot Engine, Figma, Okta, SnipeIT, Mosyle, Linear, Visual Studio, Terminal, Command Line Tools
+            <strong>Tools:</strong> Git, GitHub, VS Code, Unix, OBS, Godot Engine, Figma, Okta, SnipeIT, Mosyle, Linear, Terminal, Command Line Tools
           </p>
         </div>
 
@@ -80,11 +80,21 @@
         <p>A collection of real-time computer vision and audio experiments and more built with JavaScript.</p>
         
         <div class="project-grid">
+          <a href="https://github.com/Noacc05/react_library" target="_blank" class="project-card">
+            <img src="src/images/react-lib-preview.svg" alt="React Component Library Preview">
+            <div class="project-info">
+              <h2>React Component Library</h2>
+              <p>202-component design system built with React 19, TypeScript, and Tailwind. Live gallery showcasing buttons, inputs, charts, data display, animations, commerce widgets, navigation, and layout primitives — all from scratch.</p>
+              <span class="project-tech">React 19 · TypeScript · Tailwind · Next.js</span>
+            </div>
+          </a>
+
           <a href="src/html_apps/spectrograph.html" class="project-card">
             <img src="src/images/spectrograph-preview.png" alt="Spectrograph Preview">
             <div class="project-info">
               <h2>Audio Spectrograph</h2>
               <p>Real-time FFT audio visualizer using the Web Audio API. Experimenting with different audio processing techniques and visualizations. Drawing inspiration from bird call analysis.</p>
+              <span class="project-tech">JavaScript · Web Audio API · Canvas · FFT</span>
             </div>
           </a>
 
@@ -93,6 +103,15 @@
             <div class="project-info">
               <h2>ASCII Cam + Edge Detection</h2>
               <p>Live webcam feed running manual Sobel matrix convolutions mapped to ASCII characters. Also created a python version of the same concept using OBS and OpenCV so that you can run it on your own machine as your webcam.</p>
+              <span class="project-tech">JavaScript · Canvas · Sobel Convolution · getUserMedia</span>
+            </div>
+          </a>
+
+          <a class="project-card no-preview">
+            <div class="project-info" style="padding: 30px 20px;">
+              <h2>This Portfolio</h2>
+              <p>The site you're looking at. Custom dark-theme design with CSS variables, sticky scroll containers, carousel with vanilla JS, responsive layout, SVG project previews, and a Vite build pipeline. No frameworks — just HTML, CSS, and JS.</p>
+              <span class="project-tech">Vite · HTML · CSS · Vanilla JS · SVG</span>
             </div>
           </a>
         </div>
@@ -103,17 +122,37 @@
         <p>A collection of terminal-based tools/applications and more built with C, Java, Go, Python.</p>
         <div class="project-grid">
           <a class="project-card">
+            <img src="src/images/intune-sync-preview.svg" alt="Intune Snipe Sync Preview">
+            <div class="project-info">
+              <h2>Intune → Snipe-IT Sync</h2>
+              <p>Windows device lifecycle pipeline. Fetches all Intune managed devices via MS Graph, cross-references Okta for deprovisioned users, then creates/updates/unassigns assets in Snipe-IT. Handles CPU, RAM, and storage telemetry sync across 250+ Windows endpoints.</p>
+              <span class="project-tech">Zsh · MS Graph API · Okta JWT · jq · Snipe-IT API</span>
+            </div>
+          </a>
+
+          <a class="project-card">
+            <img src="src/images/okta-mosyle-preview.svg" alt="Okta Mosyle Sync Preview">
+            <div class="project-info">
+              <h2>Okta → Mosyle User Sync</h2>
+              <p>Python automation that authenticates to Okta via OAuth2 private-key JWT, pulls the full user directory, and reconciles it against Mosyle MDM — creating, updating, or deactivating user records to keep the Apple fleet's identity layer in sync.</p>
+              <span class="project-tech">Python · PyJWT · Okta API · Mosyle API · 1Password CLI</span>
+            </div>
+          </a>
+
+          <a class="project-card">
             <img src="src/images/inventory-preview.svg" alt="Inventory Sync Preview">
             <div class="project-info">
               <h2>Snipe-IT / Mosyle Sync</h2>
               <p>Automated reconciliation pipeline for IT asset management across 606 devices. Bash/Python scripts query Mosyle MDM and Snipe-IT APIs, diff device records by serial number, and apply inserts/updates. Built with DRY (read-only) and WRITE variants for safe iteration.</p>
+              <span class="project-tech">Bash · Python · Mosyle API · Snipe-IT API · jq</span>
             </div>
           </a>
-          <a class="project-card">
-            <img src="src/images/ascii-python-preview.svg" alt="ASCII Cam Python Preview">
-            <div class="project-info">
-              <h2>ASCII Cam — Python/OBS</h2>
-              <p>Python version of the ASCII edge-detection cam. Runs Sobel matrix convolutions on a live OpenCV video feed. Integrates with OBS as a virtual camera source so you can use it in any video call.</p>
+
+          <a class="project-card no-preview">
+            <div class="project-info" style="padding: 30px 20px;">
+              <h2>1Password CLI Secrets Pattern</h2>
+              <p>Reusable secrets-management architecture used across all sync scripts. Credentials are never stored on disk — every API key, JWT private key, and password is fetched at runtime via <code>op read</code> from a vault, enabling safe git commits and zero-env-file deployments.</p>
+              <span class="project-tech">1Password CLI · op read · Zero-Secret Codebase · Zsh · Python</span>
             </div>
           </a>
         </div>
@@ -127,7 +166,46 @@
             <img src="src/images/dashboard-preview.svg" alt="IT Asset Dashboard Preview">
             <div class="project-info">
               <h2>IT Asset Dashboard</h2>
-              <p>Python pipeline that pulls live asset data from Snipe-IT and Mosyle, computes fleet-wide stats (device counts, sync coverage, unassigned assets, serial mismatches), and surfaces them as a structured dashboard. Built to support daily inventory ops for a 600+ device fleet.</p>
+              <p>Python pipeline that pulls live asset data from Snipe-IT and Mosyle, computes fleet-wide stats (device counts, sync coverage, unassigned assets, serial mismatches), and surfaces them as a structured dashboard. Built to support daily inventory ops for a 1000+ device fleet.</p>
+              <span class="project-tech">Python · Snipe-IT API · Mosyle API · Data Visualization</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Noacc05/ascii_cam_layer" target="_blank" class="project-card">
+            <img src="src/images/webcam-vcam-preview.svg" alt="Webcam Virtual Camera Preview">
+            <div class="project-info">
+              <h2>Webcam Virtual Camera (Python)</h2>
+              <p>Standalone OBS virtual camera that applies real-time ASCII art and Sobel edge detection to your webcam feed. Uses OpenCV for capture and convolution, pyvirtualcam to broadcast as a system camera, and NumPy for fast per-frame matrix ops at 30fps.</p>
+              <span class="project-tech">Python · OpenCV · pyvirtualcam · NumPy · Sobel Kernels</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2 style="color: var(--accent);">Network Engineering</h2>
+        <p>Wireless standards, infrastructure auditing, and network automation.</p>
+        <div class="project-grid">
+          <a class="project-card">
+            <img src="src/images/ssid-audit-preview.svg" alt="SSID Standardization Preview">
+            <div class="project-info">
+              <h2>Wes Graham SSID Standardization</h2>
+              <p>Read-only wireless audit for FloSports' Waterloo office. Assessed 8 live SSIDs against WPA3/VLAN/Bridge standards via Meraki API. Produced a gap report with per-SSID remediation steps to bring the site into compliance with the company standard.</p>
+              <span class="project-tech">Meraki API · WPA3 · VLAN Segmentation · Network Auditing</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2 style="color: var(--accent);">Client Work</h2>
+        <p>Freelance web development for external clients.</p>
+        <div class="project-grid">
+          <a class="project-card no-preview">
+            <div class="project-info" style="padding: 30px 20px;">
+              <h2>Website Portfolio</h2>
+              <p>Freelance portfolio site for a Marine Biology researcher at the University of Guelph. Responsive, accessible design with project showcases, publication list, and contact form. Delivered as a production Next.js app with Tailwind v4.</p>
+              <span class="project-tech">Next.js 16 · React 19 · TypeScript · Tailwind v4</span>
             </div>
           </a>
         </div>
@@ -141,12 +219,14 @@
             <div class="project-info" style="padding: 30px 20px;">
               <h2>Data Structures & Algorithms</h2>
               <p>Implementations in C and Python covering linked lists, binary trees, hash tables, sorting algorithms, and graph traversal. Focus on time/space complexity analysis and modular design.</p>
+              <span class="project-tech">C · Python · Time Complexity · Modular Design</span>
             </div>
           </a>
           <a class="project-card no-preview">
             <div class="project-info" style="padding: 30px 20px;">
               <h2>Object-Oriented Programming</h2>
               <p>Projects in Java applying OOP principles — inheritance, polymorphism, encapsulation. Includes a multi-class simulation.</p>
+              <span class="project-tech">Java · OOP · Inheritance · Polymorphism</span>
             </div>
           </a>
         </div>
